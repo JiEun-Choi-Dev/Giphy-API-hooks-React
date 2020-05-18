@@ -10,7 +10,7 @@ const Contain = () => {
   const search = async (query, limit) => {
     const result = await Giphy.get("/v1/gifs/search", {
       params: {
-        api_key: "ZCqFmJOKeCnm6P08k6k1Ikv9Tajkofel",
+        api_key: process.env.REACT_APP_GIPHY_API_KEY,
         q: query,
         limit: limit,
         offset: 0,
